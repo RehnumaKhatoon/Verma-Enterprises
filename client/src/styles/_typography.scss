@@ -1,0 +1,496 @@
+:root {
+  --sans: "Inter", Arial, sans-serif;
+  --serif: "Inter", Arial, sans-serif;
+  --display: "Inter", Arial, sans-serif;
+  --mono: "Inter", Arial, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--display);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+p {
+  line-height: 1.7;
+}
+button,
+input,
+textarea,
+select {
+  font-family: var(--sans);
+}
+
+/* Storefront navigation and branding */
+.main-nav {
+  gap: clamp(14px, 1.7vw, 25px);
+}
+.main-nav > a:not(.nav-cta) {
+  font-size: 15px;
+  font-weight: 500;
+}
+.brand-image {
+  width: clamp(128px, 12vw, 162px);
+}
+.nav-tools button,
+.nav-icon-link,
+.cart-trigger {
+  font-size: 14px;
+}
+.nav-search input {
+  font-size: 16px;
+}
+.nav-search button {
+  font-size: 15px;
+}
+
+/* Hero and section headings */
+.hero-content-premium h1 {
+  font-size: clamp(52px, 5vw, 64px);
+  line-height: 1.1;
+}
+.hero-content-premium > p {
+  font-size: 18px;
+  line-height: 1.75;
+}
+.hero-actions-premium .button,
+.button,
+.nav-cta {
+  font-size: 15px;
+  line-height: 1.3;
+}
+.premium-heading h2,
+.image-break-copy h2,
+.plant-feature-copy h2,
+.gallery-head h2,
+.testimonial-heading h2,
+.faq-heading h2,
+.contact-ocean-copy h2,
+.care-journal-copy h2,
+.section h2 {
+  font-size: clamp(34px, 3.5vw, 42px);
+  line-height: 1.2;
+}
+.category-content strong {
+  font-size: 22px;
+  line-height: 1.3;
+}
+.category-content > span:not(.category-icon) {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.category-content small {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.image-break-copy > .eyebrow,
+.gallery-head > p,
+.care-journal-copy > p,
+.contact-ocean-copy > p,
+.faq-heading > p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+.hero-kicker,
+.hero-signature,
+.hero-scroll,
+.hero-side-note,
+.image-break-caption,
+.gallery-footnote,
+.eyebrow {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Product cards, detail views, search and forms */
+.card-info h3 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+.card-desc {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.card-price {
+  font-size: 19px;
+}
+.card-category,
+.card-tag,
+.sold-out {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.add-cart-button,
+.card-actions .whatsapp-link,
+.whatsapp-link,
+.text-link {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.catalogue-toolbar h2 {
+  font-size: 30px;
+}
+.catalogue-toolbar p,
+.catalogue-controls input,
+.catalogue-controls select,
+.filter-field select,
+.search-field input,
+.catalogue-tabs a {
+  font-size: 15px;
+}
+.results-meta,
+.results-meta > span {
+  font-size: 12px;
+}
+.premium-catalogue-hero h1 {
+  font-size: clamp(46px, 5vw, 60px);
+  line-height: 1.1;
+}
+.premium-catalogue-hero p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+.detail-copy h1 {
+  font-size: clamp(38px, 4vw, 48px);
+}
+.detail-description {
+  font-size: 17px;
+  line-height: 1.75;
+}
+.detail-price {
+  font-size: 20px;
+}
+.detail-helper,
+.availability,
+.detail-includes span,
+.detail-care-note small,
+.detail-image-label {
+  font-size: 13px;
+  line-height: 1.55;
+}
+.enquiry-fields label,
+.enquiry-admin-actions label {
+  font-size: 14px;
+}
+.enquiry-fields input,
+.enquiry-fields textarea,
+.enquiry-admin-actions select {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.enquiry-submit,
+.faq-whatsapp-button,
+.contact-email {
+  font-size: 14px;
+}
+.faq-item button strong {
+  font-size: 18px;
+}
+.faq-answer p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+.testimonial-grid blockquote {
+  font-size: 17px;
+  line-height: 1.65;
+}
+.testimonial-grid strong,
+.testimonial-grid small {
+  font-size: 13px;
+}
+.care-links a {
+  font-size: 14px;
+}
+
+/* Footer */
+.footer-col h4,
+.footer-col > a,
+.footer-brand > p,
+.footer-note p,
+.footer-bottom {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.footer-note .eyebrow {
+  font-size: 12px;
+}
+
+/* Admin login, dashboard, tables, forms and enquiry manager */
+.admin-heading h1 {
+  font-size: clamp(28px, 3vw, 32px);
+  line-height: 1.2;
+}
+.admin-heading p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.admin-sidebar .admin-nav-link,
+.admin-mobile-nav a,
+.admin-mobile-nav button {
+  font-size: 15px;
+  line-height: 1.4;
+}
+.admin-nav-label,
+.admin-brand > small,
+.admin-topbar,
+.admin-user small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.sidebar-bottom > button {
+  border: 0;
+  background: none;
+  color: #b9c9c1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 8px;
+  font-size: 12px;
+}
+
+.back-store {
+  display: block;
+  color: #7e9a90;
+  font-size: 10px;
+  padding: 10px 8px;
+}
+.admin-user strong {
+  font-size: 14px;
+}
+.stat-label {
+  font-size: 17px;
+  line-height: 1.4;
+}
+.stat-card > strong {
+  font-size: 24px;
+  line-height: 1.1;
+}
+.stat-foot {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.admin-section-head h2 {
+  font-size: 25px;
+}
+.admin-product-row strong,
+.admin-product-row small,
+.admin-row-price {
+  font-size: 14px;
+  line-height: 1.45;
+}
+.status-pill {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.manage-toolbar input,
+.manage-toolbar select {
+  font-size: 15px;
+}
+.manage-toolbar > span {
+  font-size: 12px;
+}
+.manage-table th {
+  font-size: 15px;
+  line-height: 1.4;
+}
+.manage-table td,
+.manage-product strong {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.table-actions a,
+.table-actions button {
+  min-width: 34px;
+  min-height: 34px;
+}
+.product-form label,
+.login-card label {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.product-form input:not([type="checkbox"]):not([type="file"]),
+.product-form select,
+.product-form textarea,
+.login-card input {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.form-panel h2 {
+  font-size: 24px;
+}
+.form-panel > p,
+.form-save-card > p,
+.toggle-row small,
+.form-save-card > a:last-child {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.toggle-row strong {
+  font-size: 15px;
+}
+.form-save-card .button {
+  font-size: 15px;
+}
+.login-card h1 {
+  font-size: 36px;
+}
+.login-card > p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.login-footnote {
+  font-size: 12px;
+}
+.enquiry-count-badge,
+.enquiry-admin-person strong,
+.enquiry-admin-person span,
+.enquiry-admin-top time,
+.enquiry-admin-actions > a,
+.enquiry-admin-actions label {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.enquiry-admin-card > p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .brand-image {
+    width: 130px;
+  }
+  .main-nav > a:not(.nav-cta) {
+    font-size: 15px;
+  }
+}
+@media (max-width: 780px) {
+  .brand-image {
+    width: 101px;
+  }
+  .hero-content-premium h1 {
+    font-size: clamp(35px, 7vw, 40px);
+    line-height: 1.13;
+  }
+  .hero-content-premium > p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .hero-actions-premium .button,
+  .button {
+    font-size: 15px;
+  }
+  .premium-heading h2,
+  .image-break-copy h2,
+  .plant-feature-copy h2,
+  .gallery-head h2,
+  .testimonial-heading h2,
+  .faq-heading h2,
+  .contact-ocean-copy h2,
+  .care-journal-copy h2,
+  .section h2 {
+    font-size: clamp(31px, 7vw, 37px);
+  }
+  .category-content strong {
+    font-size: 21px;
+  }
+  .card-info h3 {
+    font-size: 18px;
+  }
+  .card-desc {
+    font-size: 15px;
+  }
+  .card-price {
+    font-size: 18px;
+  }
+  .footer-col h4,
+  .footer-col > a,
+  .footer-brand > p,
+  .footer-note p,
+  .footer-bottom {
+    font-size: 14px;
+  }
+  .admin-mobile-nav a,
+  .admin-mobile-nav button {
+    font-size: 13px;
+  }
+}
+@media (max-width: 520px) {
+  .main-nav > a:not(.nav-cta) {
+    font-size: 15px;
+  }
+  .premium-catalogue-hero h1 {
+    font-size: 38px;
+  }
+  .premium-catalogue-hero p {
+    font-size: 16px;
+  }
+  .catalogue-toolbar h2 {
+    font-size: 25px;
+  }
+  .catalogue-toolbar p {
+    font-size: 14px;
+  }
+  .premium-catalogue-content .catalogue-controls select,
+  .premium-catalogue-content .catalogue-controls input {
+    font-size: 14px;
+  }
+  .card-info h3 {
+    font-size: 18px;
+  }
+  .card-desc {
+    font-size: 15px;
+  }
+  .card-price {
+    font-size: 18px;
+  }
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+  }
+  .add-cart-button,
+  .card-actions .whatsapp-link {
+    min-height: 38px;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .admin-page {
+    overflow-wrap: anywhere;
+  }
+  .manage-table-wrap {
+    max-width: 100%;
+  }
+  .admin-mobile-nav a,
+  .admin-mobile-nav button {
+    font-size: 12px;
+  }
+  .admin-brand > img {
+    width: 118px;
+    height: 78px;
+  }
+  .admin-heading h1 {
+    font-size: 28px;
+  }
+  .admin-product-row strong,
+  .admin-row-price {
+    font-size: 13px;
+  }
+  .status-pill {
+    font-size: 12px;
+  }
+}

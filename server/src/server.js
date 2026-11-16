@@ -1,0 +1,17 @@
+import './config/loadEnv.js';
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import connectDB from './config/db.js';
+import authRoutes from './routes/authRoutes.js';
+import productRoutes from './routes/productRoutes.js';
+import uploadRoutes from './routes/uploadRoutes.js';
+import enquiryRoutes from './routes/enquiryRoutes.js';
+const app=express();
+app.disable('x-powered-by');app.use(helmet());app.use(cors({origin:process.env.CLIENT_URL?.split(',').map(x=>x.trim())||'http://localhost:5173'}));app.use(express.json({limit:'1mb'}));
+app.get('/api/health',(_req,res)=>res.json({status:'ok',service:'aqua-world-api',time:new Date().toISOString()}));
+app.use('/api/auth',authRoutes);app.use('/api/products',productRoutes);app.use('/api/upload',uploadRoutes);app.use('/api/enquiries',enquiryRoutes);
+app.use((_req,res)=>res.status(404).json({message:'That page wandered off'}));
+app.use((err,_req,res,_next)=>{console.error(err);if(err.name==='ValidationError')return res.status(400).json({message:Object.values(err.errors).map(e=>e.message).join('. ')});if(err.code===11000)return res.status(409).json({message:'A product with this name already exists'});if(err instanceof SyntaxError&&'body'in err)return res.status(400).json({message:'Please send valid JSON'});if(err.code==='LIMIT_FILE_SIZE')return res.status(400).json({message:'Image must be smaller than 5 MB'});res.status(500).json({message:'Something went wrong. Please try again.'})});
+const port=Number(process.env.PORT)||5000;
+connectDB().then(()=>app.listen(port,()=>console.log(`Verma Enterprises API listening on ${port}`))).catch(err=>{console.error('Could not start API:',err.message);process.exit(1)});
