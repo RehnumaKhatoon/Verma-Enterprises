@@ -261,7 +261,7 @@ export default function Home() {
       title: "Aquatic & Aquarium Plants",
       subtitle: "A little more life in every leaf",
       href: "/plants",
-      image: gallery[0][1],
+      image: "/images/aquatic-plants.webp",
       icon: Leaf,
       count: "LIVE PLANTS · AQUASCAPING",
       category: "plants",
@@ -363,7 +363,7 @@ export default function Home() {
           </Link>
         </div>
         {loading ? (
-          <div className="product-grid">
+          <div className="product-grid home-product-grid">
             {[0, 1, 2, 3].map((i) => (
               <div className="product-skeleton" key={i} />
             ))}
@@ -371,7 +371,7 @@ export default function Home() {
         ) : error ? (
           <div className="collection-message">{error}</div>
         ) : featured.length ? (
-          <div className="product-grid">
+          <div className="product-grid home-product-grid">
             {featured.map((item, index) => (
               <ProductCard key={item._id} product={item} index={index} />
             ))}
@@ -522,13 +522,13 @@ export default function Home() {
               </div>
             </div>
             {loading ? (
-              <div className="product-grid home-category-grid">
+              <div className="product-grid home-product-grid home-category-grid">
                 {Array.from({ length: 8 }, (_, i) => (
                   <div className="product-skeleton" key={i} />
                 ))}
               </div>
             ) : categoryItems.length ? (
-              <div className="product-grid home-category-grid">
+              <div className="product-grid home-product-grid home-category-grid">
                 {categoryItems.map((item, index) => (
                   <ProductCard
                     key={item._id || item.id}

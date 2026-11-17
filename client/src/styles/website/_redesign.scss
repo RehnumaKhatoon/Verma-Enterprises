@@ -3705,6 +3705,45 @@ body {
   }
 }
 
+/* Keep Home product details inside narrow cards without changing catalogue cards. */
+@media (max-width: 780px) {
+  .verma-home .home-product-grid .product-card {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .verma-home .home-product-grid .card-info {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+  }
+
+  .verma-home .home-product-grid .card-info > div,
+  .verma-home .home-product-grid .card-info h3,
+  .verma-home .home-product-grid .card-info h3 a {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .verma-home .home-product-grid .card-price {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    padding-bottom: 0;
+  }
+
+  .verma-home .home-product-grid .card-actions {
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+
+  .verma-home .home-product-grid .card-actions > * {
+    min-width: 0;
+  }
+}
+
 /* Category heroes render directly below the in-flow navbar. */
 .premium-catalogue-hero {
   margin-top: 0;
