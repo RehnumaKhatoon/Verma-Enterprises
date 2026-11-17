@@ -48,7 +48,9 @@ export default function Navbar() {
           <a href="/#why" onClick={close}>
             About us
           </a>
-          <a href="/#FAQ">FAQ</a>
+          <a href="/#faq" onClick={close}>
+            FAQ
+          </a>
           <a href="/#contact" onClick={close}>
             Contact
           </a>
