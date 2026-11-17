@@ -5,6 +5,7 @@ import {
   Outlet,
   Route,
   Routes,
+  useLocation,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -21,6 +22,27 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import ManageProducts from "./pages/admin/ManageProducts";
 import ProductForm from "./pages/admin/ProductForm";
 import ManageEnquiries from "./pages/admin/ManageEnquiries";
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  React.useEffect(() => {
+    if (hash) {
+      const targetId = decodeURIComponent(hash.slice(1));
+      requestAnimationFrame(() => {
+        document.getElementById(targetId)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+      return;
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname, hash]);
+
+  return null;
+}
 
 function PublicLayout() {
   return (
@@ -75,6 +97,7 @@ export default function App() {
           v7_relativeSplatPath: true,
         }}
       >
+        <ScrollToTop />
         <AnimatedRoutes />
       </BrowserRouter>
     </ShopProvider>
